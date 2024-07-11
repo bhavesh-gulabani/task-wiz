@@ -8,6 +8,7 @@ import { Button } from '../ui/button';
 interface FormSubmitProps {
   children: React.ReactNode;
   disabled?: boolean;
+  disabledText?: string;
   className?: string;
   variant?:
     | 'default'
@@ -22,6 +23,7 @@ interface FormSubmitProps {
 export const FormSubmit = ({
   children,
   disabled,
+  disabledText,
   className,
   variant = 'primary',
 }: FormSubmitProps) => {
@@ -35,7 +37,7 @@ export const FormSubmit = ({
       size='sm'
       className={cn(className)}
     >
-      {children}
+      {pending || disabled ? disabledText : children}
     </Button>
   );
 };
