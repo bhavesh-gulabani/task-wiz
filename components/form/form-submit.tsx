@@ -37,7 +37,7 @@ export const FormSubmit = ({
       size='sm'
       className={cn(className)}
     >
-      {pending || disabled ? disabledText : children}
+      {pending || disabled ? disabledText || children : children}
     </Button>
   );
 };
