@@ -46,8 +46,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
       }
     };
 
-    // TODO: Uncomment when we go live
-    // fetchImages();
+    fetchImages();
     setIsLoading(false);
   }, []);
 
