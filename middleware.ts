@@ -6,6 +6,8 @@ const isPublicRoute = createRouteMatcher(['/', '/api/webhook']);
 const isProtectedRoute = createRouteMatcher([
   '/select-org(.*)',
   '/organization(.*)',
+  '/board(.*)',
+  '/api/cards(.*)',
 ]);
 
 export default clerkMiddleware((auth, req) => {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
+import { useAuth } from '@clerk/nextjs';
 
 import { CardWithList } from '@/types';
 import { fetcher } from '@/lib/fetcher';
@@ -14,6 +15,8 @@ import { Actions } from './actions';
 import { Activity } from './activity';
 
 export const CardModal = () => {
+  const { userId, orgId } = useAuth();
+
   const id = useCardModal((state) => state.id);
   const isOpen = useCardModal((state) => state.isOpen);
   const onClose = useCardModal((state) => state.onClose);
@@ -21,11 +24,13 @@ export const CardModal = () => {
   const { data: cardData } = useQuery<CardWithList>({
     queryKey: ['card', id],
     queryFn: () => fetcher(`/api/cards/${id}`),
+    enabled: !!userId && !!orgId,
   });
 
   const { data: auditLogsData } = useQuery<AuditLog[]>({
     queryKey: ['card-logs', id],
     queryFn: () => fetcher(`/api/cards/${id}/logs`),
+    enabled: !!userId && !!orgId,
   });
 
   return (
