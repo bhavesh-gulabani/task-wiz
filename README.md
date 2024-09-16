@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TaskWiz
 
-## Getting Started
+A project management tool with boards, lists and cards to organize tasks efficiently.
 
-First, run the development server:
+## Technology stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- NextJS
+- TypeScript
+- Shadcn/ui
+- Clerk
+- PostgreSQL
+- Prisma
+- Stripe Integration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Application Functionalities
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Email and social login
+- Add organizations
+- View organizations
+- CRUD operations
+  - Boards
+  - Lists
+  - Cards
+- Re-order (Drag and Drop)
+  - Lists
+  - Cards
+- View activity
+- View organization settings
+- Invite/remove organization users
+- Subscribe to pro plan
+- Manage subscription
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshots
 
-## Learn More
+![Image-1](/public/project-screenshots/image-1.png)
 
-To learn more about Next.js, take a look at the following resources:
+![Image-2](/public/project-screenshots/image-2.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Image-3](/public/project-screenshots/image-3.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Image-4](/public/project-screenshots/image-4.png)
 
-## Deploy on Vercel
+![Image-5](/public/project-screenshots/image-5.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Image-6](/public/project-screenshots/image-6.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Image-7](/public/project-screenshots/image-7.png)
+
+![Image-8](/public/project-screenshots/image-8.png)
+
+## Note
+
+- For completing a dummy payment via Stripe, you can find the test credentials [here](/public/test-card-details.txt).

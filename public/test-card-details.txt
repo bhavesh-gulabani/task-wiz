@@ -1,0 +1,3 @@
+Card number : 4242 4242 4242 4242
+MM / YY     : Any future date (e.g. 04/28)
+CVV         : 424
